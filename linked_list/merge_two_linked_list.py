@@ -16,7 +16,7 @@ class Solution:
 
         if list1:
             node.next = list1
-        else:
+        elif list2:
             node.next = list2
 
         return dummy.next
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     solution = Solution()
     reversed_head = solution.mergeTwoLists(list_one, list_two)
 
-    print(print_linked_list(reversed_head))
+    print_linked_list(reversed_head)
