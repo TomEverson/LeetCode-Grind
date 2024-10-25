@@ -4,7 +4,6 @@ class Solution:
             return 1
 
         left_ptr = len(s) - 1
-        right_ptr = len(s) - 1
 
         while left_ptr >= 0 and s[left_ptr] == " ":
             left_ptr -= 1
@@ -18,7 +17,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    s = "a "
+    s = " Hello There "
     solution = Solution()
 
     print(solution.lengthOfLastWord(s))
