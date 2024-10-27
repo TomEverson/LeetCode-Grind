@@ -14,6 +14,7 @@ class Solution:
     def traverse_level(self, root: Optional[TreeNode], level: int):
         if not root:
             return
+
         if len(self.res) == level:
             self.res.append([])
 
