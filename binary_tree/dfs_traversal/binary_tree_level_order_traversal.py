@@ -8,10 +8,10 @@ class Solution:
         self.res = []
 
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        self.traverse_level(root, 0)
+        self.dfs(root, 0)
         return self.res
 
-    def traverse_level(self, root: Optional[TreeNode], level: int):
+    def dfs(self, root: Optional[TreeNode], level: int):
         if not root:
             return
 
@@ -20,8 +20,8 @@ class Solution:
 
         self.res[level].append(root.val)
 
-        self.traverse_level(root.left, level + 1)
-        self.traverse_level(root.right, level + 1)
+        self.dfs(root.left, level + 1)
+        self.dfs(root.right, level + 1)
 
 
 if __name__ == "__main__":
