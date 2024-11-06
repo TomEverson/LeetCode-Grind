@@ -8,10 +8,10 @@ class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         res = []
         q = deque([root])
+
         while q:
             right_view = None
             qLen = len(q)
-            print("Q Len", len(q))
 
             for _ in range(qLen):
                 node = q.popleft()
